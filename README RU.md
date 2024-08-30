@@ -24,7 +24,7 @@
 3. Скачайте или клонируйте репозиторий:
    ```bash
    git clone https://github.com/ваш_репозиторий.git
-   cd ваш_репозиторий
+   cd https://github.com/Iablunoshka/Beat-Replacement
    ```
 
 ## Notes
