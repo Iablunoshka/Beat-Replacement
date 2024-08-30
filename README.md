@@ -32,6 +32,6 @@ This program is designed for the automatic replacement of audio tracks in Beat S
 The interface is intuitive. For a successful song replacement, simply select the path to the original map and the cover; everything else is optional.
 
 ## Notes
-- The tool ensures that the replaced audio perfectly matches the original map, especially if you manually specify the shift, allowing the cover to be played without synchronization issues.
+- The tool ensures that the replaced audio perfectly matches the original map, especially if you manually specify the [shift](https://github.com/Iablunoshka/Beat-Replacement/blob/main/Shift%20.md), allowing the cover to be played without synchronization issues.
 - If the shift is not specified, the program will calculate it using FFT cross-correlation, which has minimal error if the cover is high quality.
 - It automatically handles cases where the replacement track is shorter or longer by adding the necessary silence or trimming the track to match the length of the original track.
