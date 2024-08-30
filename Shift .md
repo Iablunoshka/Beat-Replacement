@@ -1,40 +1,38 @@
-### Понимание сдвига в аудио
+### Understanding Audio Shift
 
-Сдвиг в аудио относится к разнице во времени между двумя звуковыми дорожками. Это важно при синхронизации кавера с оригинальной песней. Понимание и правильное определение сдвига позволяет корректно синхронизировать треки, чтобы ноты на карте попадали в такт кавера.
+Audio shift refers to the time difference between two audio tracks. This is important for synchronizing a cover with the original song. Understanding and correctly determining the shift allows you to synchronize tracks properly so that the notes on the map align with the cover.
 
-**Положительный сдвиг:** Если у вас есть положительный сдвиг, это означает, что вторая аудиодорожка (кавер) начинается позже по сравнению с первой (оригинал). Чтобы синхронизировать треки, вам нужно будет сдвинуть кавер назад, что можно сделать, обрезая начало кавера.
+**Positive Shift:** If you have a positive shift, it means that the second audio track (cover) starts later compared to the first one (original). To synchronize the tracks, you'll need to shift the cover backward, which can be done by trimming the beginning of the cover.
 
-**Отрицательный сдвиг:** Если сдвиг отрицательный, это означает, что вторая аудиодорожка начинается раньше по сравнению с первой. В этом случае вам нужно сдвинуть кавер вперед, что можно сделать, добавляя тишину в начало кавера.
+**Negative Shift:** If the shift is negative, it means that the second audio track starts earlier compared to the first one. In this case, you need to shift the cover forward, which can be done by adding silence to the beginning of the cover.
 
-### Определение сдвига вручную с помощью аудио редактора
+### Determining Shift Manually Using an Audio Editor
 
-Для определения сдвига между двумя аудиотреками вручную, вы можете использовать любой аудио редактор, например, [Audacity](https://github.com/audacity/audacity). Вот как это сделать:
+To manually determine the shift between two audio tracks, you can use any audio editor, such as [Audacity](https://github.com/audacity/audacity). Here’s how to do it:
 
-1. **Импортируйте треки:**
-   - Откройте Audacity и импортируйте оба аудиофайла (оригинал и кавер) в проект. Для этого выберите `File` -> `Open'  и выберите ваши файлы.
+1. **Import Tracks:**
+   - Open Audacity and import both audio files (original and cover) into the project. To do this, select `File` -> `Open` and choose your files.
 
-2. **Разместите треки на дорожках:**
-   - Убедитесь, что оба трека размещены на отдельных дорожках в Audacity.
+2. **Place Tracks on Separate Tracks:**
+   - Make sure both tracks are placed on separate tracks in Audacity.
    ![image](https://github.com/user-attachments/assets/7225b73e-f01a-4054-9e0d-5c454f58d097)
 
-3. **Найдите начало и конец:**
-   - Определите начало и конец ключевых звуковых событий в обоих треках.
+3. **Identify Start and End:**
+   - Determine the start and end of key audio events in both tracks.
 
-5. **Выявите сдвиг:**
-   - Посмотрите на формы волн и размещения пиков относительно двух аудиодорожек растояния между ними должно быть минимальным  для точности синхронизацыи
-    ![image](https://github.com/user-attachments/assets/5db99bca-0fac-4fa8-a6a4-2756d7680a74)
-    ![image](https://github.com/user-attachments/assets/385229c9-4a54-42bf-960b-f8900433094f)
+4. **Detect Shift:**
+   - Look at the waveforms and the placement of peaks relative to the two audio tracks. The distance between them should be minimal for accurate synchronization.
+   ![image](https://github.com/user-attachments/assets/5db99bca-0fac-4fa8-a6a4-2756d7680a74)
+   ![image](https://github.com/user-attachments/assets/385229c9-4a54-42bf-960b-f8900433094f)
 
-6. **Измерьте сдвиг:**
-   - Перед измерениям здвига соотвествено настройте шкалу.
+5. **Measure Shift:**
+   - Before measuring the shift, adjust the scale accordingly.
    ![image](https://github.com/user-attachments/assets/f3cc91a2-77d4-48bb-a6ca-85df748e1209)
 
-   -Если вторая дорожка начинается позже, измерьте расстояние от начала первой дорожки до начала второй. Это расстояние и будет положительным сдвигом.
-   - Если вторая дорожка начинается раньше, измерьте расстояние от начала второй дорожки до начала первой. Это расстояние и будет отрицательным сдвигом.
-  ![image](https://github.com/user-attachments/assets/0460f2db-5d5c-4111-994c-061ca5328ccd)
-  ![image](https://github.com/user-attachments/assets/72a35333-69d3-48d6-b3c6-d57227778a1c)
+   - If the second track starts later, measure the distance from the start of the first track to the start of the second. This distance will be the positive shift.
+   - If the second track starts earlier, measure the distance from the start of the second track to the start of the first. This distance will be the negative shift.
+   ![image](https://github.com/user-attachments/assets/0460f2db-5d5c-4111-994c-061ca5328ccd)
+   ![image](https://github.com/user-attachments/assets/72a35333-69d3-48d6-b3c6-d57227778a1c)
 
-8. **Синхронизацыя:**
-   - Введите здвиг в поле ввода в интерфейсе зависимости от его типа добавте - или + также конвертируйте полученые значения из audacity в ms умножыв на 1000
-  
-
+6. **Synchronization:**
+   - Enter the shift value into the input field in the interface. Depending on its type, add - or +. Also, convert the values obtained from Audacity to milliseconds by multiplying by 1000.
