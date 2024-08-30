@@ -35,7 +35,6 @@ def preprocessing(or_path, cover_path,shift=False):
     shift_calculate(processed_song_path,processed_cover_path,shift)
 
 
-
 def duration_calc(y, sr):
     duration_ = librosa.get_duration(y=y, sr=sr)
     return duration_
@@ -67,7 +66,6 @@ def shift_calculate(processed_song_path,processed_cover_path,shift):
         finish_processing(time_shift, duration_y1, y1, sr1)
 
 
-
 def float_to_time_str(seconds_float):
     # Разделяем целую и дробную части
     seconds_int = int(seconds_float)
@@ -86,6 +84,7 @@ def float_to_time_str(seconds_float):
     # Форматируем строку
     time_str = f"{hours:02}:{minutes:02}:{seconds:02}.{milliseconds:03}"
     return time_str
+    
 def finish_processing(time_shift, duration_y1, y1, sr1):
     output_cover_path = "D:\\aligned_cover.wav"  # Путь для сохранения обрезанного кавера
     pre_cover_path = "D:\\pre_finish_cover.wav"
@@ -134,8 +133,6 @@ def finish_processing(time_shift, duration_y1, y1, sr1):
     # Удаление файлов
     for file_path in files_to_remove:
         os.remove(file_path)
-
-
 
     print("step3")
 
