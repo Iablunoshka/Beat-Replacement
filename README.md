@@ -1,49 +1,37 @@
-# Beat Saber Audio Replacement Tool
+**Beat-Replacement**
 
-This program is designed to facilitate the automated replacement of audio tracks in Beat Saber custom maps. It provides a user-friendly interface for selecting and replacing audio while maintaining synchronization with the original beat map.
+This program is designed for the automatic replacement of audio tracks in Beat Saber songs. It allows you to easily swap out original tracks with covers, creating a new directory with the updated map while preserving all necessary metadata and synchronization.
 
 ## Features
-
-- **Audio Synchronization:** Automatically calculates and adjusts the audio shift between the original track and the replacement to ensure perfect synchronization.
-- **Silence Handling:** Adds silence to the end or start of the replacement track if it is shorter or longer than the original, ensuring the length matches perfectly.
-- **Precise Audio Trimming:** Utilizes `ffmpeg` for exact audio trimming and processing, with millisecond accuracy.
-- **Custom Shift Adjustment:** Allows manual adjustment of the audio shift for fine-tuning the replacement.
-- **Graphical User Interface:** Provides an intuitive GUI for selecting the song folder and replacement audio file.
+- **Automatic Shift Detection:** Determines the time shift between the original track and the cover using cross-correlation.
+- **Precise Silence Handling:** Adds or trims silence at the beginning and end of the cover for perfect synchronization with the original track.
+- **Graphical Interface:** User-friendly GUI built with tkinter for selecting files and managing the replacement process.
+- **Metadata Management:** Automatically updates metadata in the `Info.dat` file, including the song title and author, based on the provided input.
 
 ## Dependencies
-- `Python`: For the program to work.
-- `ffmpeg`: Used for audio processing, trimming, and format conversion.
-- `librosa,scipy`: For audio analysis and manipulation.
-- `numpy`: Essential for numerical operations during audio processing.
-- `customtkinter`: For creating a modern and customizable GUI.
+- [Python 3.x](https://python.org)
+- [FFmpeg](https://ffmpeg.org) - for audio processing.
+- [librosa](https://librosa.org/) - for audio data analysis.
+- [Pillow](https://python-pillow.org/) - for image processing.
+- [customtkinter](https://github.com/TomSchimansky/CustomTkinter) - for creating the GUI.
 
 ## Installation
+1. Install the required dependencies:
+   ```bash
+   pip install librosa Pillow customtkinter scipy
+   ```
+2. Ensure FFmpeg is installed on your system and accessible in the system path.
 
-To install the necessary dependencies, run:
-```bash
-pip install librosa numpy customtkinter scipy
-```
-Ensure that `ffmpeg` is installed and accessible from your system's PATH.
+3. Download or clone the repository:
+   ```bash
+   git clone https://github.com/Iablunoshka/Beat-Replacement.git
+   cd Beat-Replacement
+   ```
 
 ## Usage
-
-1. **Run the GUI:**
-   ```bash
-   python gui.py
-   ```
-2. **Select the Song Folder:**
-   - Choose the Beat Saber map folder where you want to replace the audio.
-3. **Select or Input the Cover Path :**
-   - Choose the replacement audio file or manually input its path.
-4. **Adjust Shift (Optional):**
-   - Use the provided controls to manually adjust the audio shift if needed.
-5. **Start Replacement:**
-   - Click the "Start replacement" button to initiate the process.
+The interface is intuitive. For a successful song replacement, simply select the path to the original map and the cover; everything else is optional.
 
 ## Notes
-
-- The tool ensures that the replacement sound perfectly matches the original map if you specify the shift yourself, which allows you to play the map without problems with synchronization with the map.
-
--If the shift is not specified, the program itself will calculate it using FFT cross-correlation, there is almost no error in this method if the cover is high-quality.
-
-- It automatically handles cases where the replacement track is shorter by adding the necessary silence to match the original track's length.
+- The tool ensures that the replaced audio perfectly matches the original map, especially if you manually specify the shift, allowing the cover to be played without synchronization issues.
+- If the shift is not specified, the program will calculate it using FFT cross-correlation, which has minimal error if the cover is high quality.
+- It automatically handles cases where the replacement track is shorter or longer by adding the necessary silence or trimming the track to match the length of the original track.
