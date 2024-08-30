@@ -27,8 +27,8 @@ To manually determine the shift between two audio tracks, you can use any audio 
 
 5. **Measure Shift:**
    - Before measuring the shift, adjust the scale accordingly.
+     
    ![image](https://github.com/user-attachments/assets/f3cc91a2-77d4-48bb-a6ca-85df748e1209)
-
    - If the second track starts later, measure the distance from the start of the first track to the start of the second. This distance will be the positive shift.
    - If the second track starts earlier, measure the distance from the start of the second track to the start of the first. This distance will be the negative shift.
    ![image](https://github.com/user-attachments/assets/0460f2db-5d5c-4111-994c-061ca5328ccd)
